@@ -1,0 +1,161 @@
+.topbar{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: #f0c43f;
+    z-index: 2;
+}
+
+.navigation{
+    display: flex;
+    border: 2px solid #bbbbbf;
+    height: 55px;
+}
+
+.mcdonaldsicon{
+    margin-left: 202px;
+    z-index: 1;
+}
+
+.header-items{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 5px;
+    left: 270px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    height: 30px;
+    border-left: 1px solid #bbbbbf;
+}
+
+.header-items img{
+    width: 25%;
+    padding-right: 3px;
+}
+
+.header-items a{
+    text-decoration: none;
+    color: black;
+}
+
+.mcdelivery{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 5px;
+    left: 270px;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    height: 30px;
+    border-left: 1px solid #bbbbbf;
+}
+
+.banner img{
+    width: 100%;
+}
+
+.main{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.main h2{
+    font-size: 40px;
+    margin-bottom: 100px;
+}
+
+.items{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 200px;
+}
+
+.day-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 150px;
+    padding-right: 30px;
+}
+
+.day-items img{
+    width: 100%;
+    margin-bottom: 40px;
+    box-shadow: 0px 15px 30px black;
+}
+
+.day-items h3{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.day-items p{
+    font-size: 18px;
+}
+
+.contact{
+    position: relative;
+    display: flex;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: silver;
+    align-items: center;
+    height: 50px;
+}
+
+.contact p{
+    position: relative;
+    padding-right: 10px;
+    left: 200px;
+}
+
+.contact img{
+    position: relative;
+    right: -1000px;
+    padding-right: 30px;
+}
+
+.address{
+    position: relative;
+    display: flex;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #414141;
+    align-items: center;
+    height: 80px;
+    color: white;
+}
+
+.address h4{
+    width: 50%;
+    position: relative;
+    padding-right: 10px;
+    left: 200px;
+}
+
+.address p{
+    position: relative;
+    right: -900px;
+    padding-right: 40px;
+    font-size: 13px;
+}
