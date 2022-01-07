@@ -1,5 +1,4 @@
 .topbar{
-    position: absolute;
     top: 0px;
     width: 100%;
     height: 5px;
@@ -18,8 +17,69 @@
     z-index: 1;
 }
 
-.header-items{
+#burguermenu{
+    opacity: 0;
+}
+
+label{
+    cursor: pointer;
     position: relative;
+    display: block;
+    height: 22px;
+    width: 30px;
+    margin-top: 15px;
+}
+
+label span{
+    position: absolute;
+    display: block;
+    height: 5px;
+    width: 100%;
+    border-radius: 30px;
+    background: #f0c43f;
+    transition: 0.25s ease-in-out;
+}
+
+label span:nth-child(1){
+    top: 0;
+}
+
+label span:nth-child(2){
+    top: 8px;
+}
+
+label span:nth-child(3){
+    top: 16px;
+}
+
+#burguermenu:checked + label span:nth-child(1){
+    transform: rotate(-45deg);
+    top: 8px;
+}
+
+#burguermenu:checked + label span:nth-child(2){
+    opacity: 0;
+}   
+
+#burguermenu:checked + label span:nth-child(3){
+    transform: rotate(45deg);
+    top: 8px;
+}
+
+#burguermenu:checked ~ .items-menu{
+    opacity: 100;
+}
+
+.items-menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.header-items{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -31,7 +91,7 @@
     font-weight: bold;
     text-decoration: none;
     height: 30px;
-    border-left: 1px solid #bbbbbf;
+    border-right: 1px solid #bbbbbf;
 }
 
 .header-items img{
@@ -45,7 +105,6 @@
 }
 
 .mcdelivery{
-    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,7 +122,6 @@
 }
 
 .main{
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -77,12 +135,11 @@
 }
 
 .items{
-    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding-bottom: 200px;
+    margin-bottom: 80px;
 }
 
 .day-items{
@@ -91,7 +148,6 @@
     justify-content: center;
     align-items: center;
     width: 30%;
-    height: 150px;
     padding-right: 30px;
 }
 
@@ -112,7 +168,7 @@
 }
 
 .contact{
-    position: relative;
+    
     display: flex;
     font-size: 18px;
     font-weight: bold;
@@ -122,20 +178,16 @@
     height: 50px;
 }
 
-.contact p{
-    position: relative;
-    padding-right: 10px;
-    left: 200px;
+.contact p{ 
+    padding: 0px 10px;
 }
 
 .contact img{
-    position: relative;
-    right: -1000px;
     padding-right: 30px;
 }
 
 .address{
-    position: relative;
+    
     display: flex;
     font-size: 13px;
     font-weight: bold;
@@ -148,14 +200,97 @@
 
 .address h4{
     width: 50%;
-    position: relative;
-    padding-right: 10px;
+    padding: 0px 10px;
     left: 200px;
 }
 
 .address p{
-    position: relative;
-    right: -900px;
     padding-right: 40px;
     font-size: 13px;
 }
+
+@media only screen and (max-width: 1180px){
+
+     .mcdonaldsicon{
+        margin-left: 50px;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px){
+    .items{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0px;
+    }
+
+    .day-items{
+        width: 90%;
+        margin-bottom: 30px;
+        padding-right: 0px;
+    }
+
+    .contact{
+        display: flex;
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    .contact p{
+        padding-right: 0px;
+    }
+
+    .contact img{
+        padding-right: 0px;
+    }
+    
+    .address{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .address h4{
+        padding-right: 0px;
+        font-size: 10px;
+        width: 70%;
+    }
+
+    .address p{
+        padding-right: 0px;
+        font-size: 10px;
+    }
+
+    .items-menu{
+        display: flex;
+        flex-direction: column;
+        height: 280px;
+        justify-content: space-around;
+        background-color: white;
+        z-index: 1;
+        align-items: center;
+    }
+
+    .header-items, .mcdelivery {
+        border-right: 0px;
+        border-left: 0px;
+        border-bottom: 1px solid #bbbbbf;
+        width: 78%;
+    }
+
+    .mcdelivery{
+        width: 90%;
+    }
+
+}
+
+@media only screen and (min-width: 1180px){
+    .items-menu{
+        opacity: 100;
+    }
+
+    label{
+        display: none;
+    }
+}
+
